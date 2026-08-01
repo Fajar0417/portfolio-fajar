@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { CreationProfileCard } from "./creation-profile-card";
 import { CreationVideoGrid } from "./creation-video-grid";
-import { tiktokProfile, tiktokVideoUrls } from "@/data/creations";
+import { tiktokProfile } from "@/data/creations";
+import tiktokData from "@/data/tiktok.json";
 
 type Platform = "TikTok" | "Instagram";
 
@@ -40,10 +41,10 @@ export function CreationTabs() {
           <CreationProfileCard profile={tiktokProfile} />
 
           <p className="text-muted-foreground text-sm mb-6">
-            Menampilkan {tiktokVideoUrls.length} dari {tiktokProfile.totalVideos} video
+            Menampilkan {tiktokData.length} konten
           </p>
 
-        <CreationVideoGrid items={tiktokVideoUrls} />
+          <CreationVideoGrid />
         </>
       ) : (
         <div className="text-center text-muted-foreground py-16">
