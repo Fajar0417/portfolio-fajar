@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 interface ContributionDay {
   date: string;
   count: number;
@@ -21,12 +25,13 @@ const MONTH_NAMES = [
 ];
 
 export function ContributionHeatmap({ data }: ContributionHeatmapProps) {
+  const t = useTranslations("dashboard.heatmap");
+
   const weeks: ContributionDay[][] = [];
   for (let i = 0; i < data.length; i += 7) {
     weeks.push(data.slice(i, i + 7));
   }
 
-  // Tentukan label bulan berdasarkan minggu pertama tiap bulan baru muncul
   const monthLabels: { weekIndex: number; label: string }[] = [];
   let lastMonth = -1;
   weeks.forEach((week, i) => {
@@ -59,7 +64,7 @@ export function ContributionHeatmap({ data }: ContributionHeatmapProps) {
             {week.map((day, di) => (
               <div
                 key={di}
-                title={`${day.date}: ${day.count} kontribusi`}
+                title={t("contributionsTooltip", { count: day.count })}
                 className={`size-3.5 rounded-sm ${getIntensity(day.count)}`}
               />
             ))}
@@ -68,7 +73,7 @@ export function ContributionHeatmap({ data }: ContributionHeatmapProps) {
       </div>
 
       <div className="flex items-center gap-2 mt-4 text-sm text-muted-foreground">
-        <span>Sedikit</span>
+        <span>{t("less")}</span>
         <div className="flex gap-1">
           <div className="size-3.5 rounded-sm bg-muted" />
           <div className="size-3.5 rounded-sm bg-green-900" />
@@ -76,7 +81,7 @@ export function ContributionHeatmap({ data }: ContributionHeatmapProps) {
           <div className="size-3.5 rounded-sm bg-green-500" />
           <div className="size-3.5 rounded-sm bg-green-400" />
         </div>
-        <span>Banyak</span>
+        <span>{t("more")}</span>
       </div>
     </div>
   );

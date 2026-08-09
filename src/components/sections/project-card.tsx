@@ -1,55 +1,126 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Pin } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarDays,
+  Pin,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+
 import type { Project } from "@/data/projects";
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+}: {
+  project: Project;
+}) {
+  const t = useTranslations("projects");
+
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="block rounded-2xl border border-border bg-card overflow-hidden hover:border-accent transition-colors"
+      className="
+        group
+        block
+        overflow-hidden
+        rounded-3xl
+        border
+        border-border
+        bg-card/80
+        backdrop-blur
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:border-yellow-500/40
+        hover:shadow-2xl
+        hover:shadow-yellow-500/10
+      "
     >
-      <div className="relative">
+      {/* ================= IMAGE ================= */}
+
+      <div className="relative aspect-video overflow-hidden">
+        <Image
+          src={project.image}
+          alt={t(project.nameKey)}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+        {/* Featured */}
+
         {project.featured && (
-          <span className="absolute top-3 right-3 z-10 flex items-center gap-1.5 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1.5 rounded-full">
-            <Pin className="size-3.5" />
-            Featured
-          </span>
+          <div className="absolute left-4 top-4">
+            <span className="inline-flex items-center gap-1 rounded-full border border-yellow-500/30 bg-yellow-500/15 px-3 py-1 text-xs font-semibold text-yellow-400 backdrop-blur">
+              <Pin className="size-3.5 fill-current" />
+              Featured
+            </span>
+          </div>
         )}
-        <div className="relative aspect-video bg-muted">
-          <Image
-            src={project.image}
-            alt={project.name}
-            fill
-            className="object-cover"
-          />
+
+        {/* Project Type */}
+
+        <div className="absolute bottom-4 left-4">
+          <span className="rounded-full bg-black/40 px-3 py-1 text-xs font-medium text-white backdrop-blur">
+            🌐 {project.type}
+          </span>
         </div>
       </div>
 
-      <div className="p-5">
-        <h3 className="font-semibold mb-1">{project.name}</h3>
-        <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
-          {project.description}
+      {/* ================= CONTENT ================= */}
+
+      <div className="p-6">
+        <h3 className="text-xl font-semibold transition-colors group-hover:text-yellow-500">
+          {t(project.nameKey)}
+        </h3>
+
+        <p className="mt-3 line-clamp-2 leading-7 text-muted-foreground">
+          {t(project.descriptionKey)}
         </p>
 
-        <div className="flex flex-wrap gap-2 mb-3">
+        {/* ================= TECH STACK ================= */}
+
+        <div className="mt-6 flex flex-wrap gap-2">
           {project.techStack.slice(0, 6).map((tech) => (
-            <span
+            <div
               key={tech.name}
               title={tech.name}
-              className={`size-8 rounded-lg flex items-center justify-center text-white text-xs font-bold ${tech.color}`}
+              className={`
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-xl
+                text-sm
+                font-bold
+                text-white
+                shadow-md
+                transition-transform
+                duration-300
+                group-hover:scale-105
+                ${tech.color}
+              `}
             >
               {tech.icon}
-            </span>
+            </div>
           ))}
         </div>
 
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs bg-muted text-muted-foreground px-2.5 py-1 rounded-full">
-            🌐 {project.type}
-          </span>
-          <span className="text-xs bg-muted text-muted-foreground px-2.5 py-1 rounded-full">
-            {project.category}
+        {/* ================= FOOTER ================= */}
+
+        <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
+          <div className="flex items-center gap-2">
+            <span className="rounded-full border border-border bg-muted/60 px-3 py-1 text-xs text-muted-foreground">
+              {t(project.category.toLowerCase())}
+            </span>
+          </div>
+
+          <span className="flex items-center gap-2 text-sm font-medium text-yellow-500">
+            View Project
+
+            <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
           </span>
         </div>
       </div>

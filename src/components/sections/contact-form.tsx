@@ -1,17 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "sent" | "error">(
-    "idle"
-  );
+  const t = useTranslations("contact.form");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "sent" | "error"
+  >("idle");
+
+  async function handleSubmit(
+    e: React.FormEvent<HTMLFormElement>
+  ) {
     e.preventDefault();
+
     setStatus("loading");
 
     const formData = new FormData(e.currentTarget);
+
     const payload = {
       name: formData.get("name"),
       email: formData.get("email"),
@@ -21,11 +28,14 @@ export function ContactForm() {
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(payload),
       });
 
       if (!res.ok) throw new Error();
+
       setStatus("sent");
       e.currentTarget.reset();
     } catch {
@@ -35,50 +45,59 @@ export function ContactForm() {
 
   return (
     <div className="mt-10">
-      <h2 className="font-semibold mb-4">Atau kirimkan saya pesan</h2>
+      <h2 className="mb-4 text-xl font-semibold">
+        {t("title")}
+      </h2>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div className="grid sm:grid-cols-2 gap-4">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4"
+      >
+        <div className="grid gap-4 sm:grid-cols-2">
           <input
             name="name"
             type="text"
-            placeholder="Name"
             required
-            className="bg-card border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent"
+            placeholder={t("name")}
+            className="rounded-xl border border-border bg-card px-4 py-3 text-sm focus:border-accent focus:outline-none"
           />
+
           <input
             name="email"
             type="email"
-            placeholder="Email"
             required
-            className="bg-card border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent"
+            placeholder={t("email")}
+            className="rounded-xl border border-border bg-card px-4 py-3 text-sm focus:border-accent focus:outline-none"
           />
         </div>
 
         <textarea
           name="message"
-          placeholder="Message"
           required
-          rows={4}
-          className="bg-card border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent resize-none"
+          rows={5}
+          placeholder={t("message")}
+          className="resize-none rounded-xl border border-border bg-card px-4 py-3 text-sm focus:border-accent focus:outline-none"
         />
 
         <button
           type="submit"
           disabled={status === "loading"}
-          className="bg-card border border-border hover:border-accent transition-colors font-medium text-sm px-5 py-3 rounded-xl disabled:opacity-50"
+          className="rounded-xl border border-border bg-card px-5 py-3 text-sm font-medium transition-colors hover:border-accent disabled:opacity-50"
         >
-          {status === "loading" ? "Mengirim..." : "Kirim Email"}
+          {status === "loading"
+            ? t("sending")
+            : t("send")}
         </button>
 
         {status === "sent" && (
           <p className="text-sm text-green-500">
-            Pesan terkirim! Saya akan membalas secepatnya.
+            {t("success")}
           </p>
         )}
+
         {status === "error" && (
           <p className="text-sm text-red-500">
-            Gagal mengirim pesan. Coba lagi atau hubungi lewat email langsung.
+            {t("error")}
           </p>
         )}
       </form>

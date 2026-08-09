@@ -1,67 +1,45 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function AboutSection() {
+  const t = useTranslations("about");
+
   return (
     <section className="max-w-6xl mx-auto px-8 py-12">
-
       <div className="mb-8">
-        <h1 className="text-4xl font-bold">
-          Tentang
-        </h1>
+        <h1 className="text-2xl font-bold mb-2">{t("title")}</h1>
 
-        <p className="text-muted-foreground mt-2">
-          Pengenalan singkat mengenai siapa saya.
-        </p>
+        <p className="text-muted-foreground mt-2">{t("description")}</p>
       </div>
 
       <hr className="border-border mb-10" />
 
       <div className="space-y-8 text-lg leading-9 text-muted-foreground">
-
         <p>
-          Saya <span className="text-foreground font-medium">Fajar Ferdiansyah</span>,
-          seorang Software Engineer yang berbasis di Jambi, berdedikasi untuk
-          membangun solusi digital yang berdampak. Saya spesialis dalam
-          pengembangan platform web dan aplikasi mobile menggunakan tech stack
-          modern, termasuk Next.js, TypeScript, dan pengembangan Android native
-          dengan Kotlin.
+          {t.rich("paragraph1", {
+            name: (chunks) => (
+              <span className="text-foreground font-medium">{chunks}</span>
+            ),
+          })}
         </p>
 
-        <p>
-          Fokus utama saya adalah merancang arsitektur perangkat lunak yang
-          tidak hanya berfungsi tetapi juga terstruktur dengan baik, mudah
-          dipelihara, dan skalabel untuk memenuhi kebutuhan bisnis. Saya percaya
-          bahwa kode berkualitas tinggi harus berjalan beriringan dengan
-          efisiensi sistem dan kejelasan logika.
-        </p>
+        <p>{t("paragraph2")}</p>
 
-        <p>
-          Saya memadukan keahlian teknis dengan komunikasi proaktif, berpikir
-          kritis, dan manajemen waktu yang efektif. Saya berkembang dalam
-          lingkungan kolaboratif dan memanfaatkan keterampilan kepemimpinan
-          untuk memastikan setiap proyek memberikan hasil optimal dan dampak
-          nyata.
-        </p>
-
+        <p>{t("paragraph3")}</p>
       </div>
 
       <div className="mt-10">
+        <p className="mb-3 text-lg">{t("signOff")}</p>
 
-        <p className="text-lg mb-3">
-          Salam hangat,
-        </p>
-
-        <Image
-          src="/images/signature.png"
-          alt="Tanda tangan"
-          width={170}
-          height={70}
-          className="object-contain"
-        />
-
+        <div className="relative h-20 w-52">
+          <Image
+            src="/images/signature.png"
+            alt="Tanda tangan"
+            fill
+            className="object-contain object-left"
+          />
+        </div>
       </div>
-
-      <hr className="border-border mt-10" />
 
     </section>
   );

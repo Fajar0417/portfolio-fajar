@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 
 export function MessageInput({ onSent }: { onSent: () => void }) {
+  const t = useTranslations("guestbook");
   const { data: session } = useSession();
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ export function MessageInput({ onSent }: { onSent: () => void }) {
       <input
         value={content}
         onChange={(e) => setContent(e.target.value)}
-        placeholder="Tulis pesan..."
+        placeholder={t("writeMessage")}
         className="flex-1 bg-card border border-border rounded-full px-5 py-3 text-sm focus:outline-none focus:border-accent"
       />
       <button

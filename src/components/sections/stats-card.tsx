@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 interface StatCardProps {
   label: string;
   value: string | number;
@@ -31,18 +35,24 @@ interface StatsGridProps {
 }
 
 export function StatsGrid({ stats }: StatsGridProps) {
+  const t = useTranslations("dashboard.stats");
+
   return (
     <div className="space-y-4 mb-8">
       <div className="grid grid-cols-3 gap-4 ">
-        <StatCard label="Pengikut" value={stats.followers} />
-        <StatCard label="Mengikuti" value={stats.following} />
-        <StatCard label="Repositori" value={stats.repos} />
+        <StatCard label={t("followers")} value={stats.followers} />
+        <StatCard label={t("following")} value={stats.following} />
+        <StatCard label={t("repos")} value={stats.repos} />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <StatCard label="Kontribusi" value={stats.contributions} />
-        <StatCard label="Minggu Ini" value={stats.thisWeek} />
-        <StatCard label="Hari Terbaik" value={stats.bestDay} />
-        <StatCard label="Rata-rata Harian" value={stats.dailyAvg} suffix="/ hari" />
+        <StatCard label={t("contributions")} value={stats.contributions} />
+        <StatCard label={t("thisWeek")} value={stats.thisWeek} />
+        <StatCard label={t("bestDay")} value={stats.bestDay} />
+        <StatCard
+          label={t("dailyAvg")}
+          value={stats.dailyAvg}
+          suffix={t("perDay")}
+        />
       </div>
     </div>
   );

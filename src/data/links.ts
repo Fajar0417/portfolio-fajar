@@ -5,6 +5,7 @@ export interface SocialLink {
 }
 
 export interface LinkItem {
+  id: "portfolio" | "monkeytype" | "saweria";
   title: string;
   description: string;
   url: string;
@@ -21,27 +22,27 @@ export const socialLinks: SocialLink[] = [
 
 export const linkItems: LinkItem[] = [
   {
+    id: "portfolio",
     title: "Portofolio",
     description: "Website pribadi & portofolio",
     url: "https://satriabahari.my.id",
     icon: "globe",
   },
   {
+    id: "monkeytype",
     title: "Monkeytype",
     description: "Profil kecepatan mengetik",
     url: "https://monkeytype.com",
     icon: "keyboard",
   },
   {
+    id: "saweria",
     title: "Saweria",
     description: "Platform donasi Indonesia",
     url: "https://saweria.co/fajarferdiansyah",
     icon: "heart",
   },
 ];
-
 export const contactInfo = {
-  title: "Hubungi Saya",
-  description: "Jangan ragu untuk menghubungi untuk kolaborasi atau sekadar ngobrol",
   email: "fajarferdiansyah3009@gmail.com",
 };

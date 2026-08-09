@@ -1,54 +1,80 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { skills, type SkillCategory } from "@/data/skills";
 import { motion, AnimatePresence } from "framer-motion";
 
-const tabs: { label: string; value: SkillCategory | "Semua" }[] = [
-  { label: "Semua", value: "Semua" },
-  { label: "Utama", value: "Utama" },
-  { label: "Frontend", value: "Frontend" },
-  { label: "Backend", value: "Backend" },
-  { label: "Mobile", value: "Mobile" },
-  { label: "Database", value: "Database" },
-  { label: "Tools", value: "Tools" },
+const tabValues: (SkillCategory | "Semua")[] = [
+  "Semua",
+  "Utama",
+  "Frontend",
+  "Backend",
+  "Mobile",
+  "Database",
+  "Tools",
 ];
 
-export function SkillsGrid() {
-  const [active, setActive] =
-    useState<SkillCategory | "Semua">("Semua");
+const tabLabelKeys: Record<SkillCategory | "Semua", string> = {
+  Semua: "all",
+  Utama: "main",
+  Frontend: "frontend",
+  Backend: "backend",
+  Mobile: "mobile",
+  Database: "database",
+  Tools: "tools",
+};
 
+export function SkillsGrid() {
+  const t = useTranslations("skills");
+  const [active, setActive] = useState<SkillCategory | "Semua">("Semua");
+
+  // ✅ PERUBAHAN 1: Cek apakah kategori yang aktif ada di dalam array categories
   const filtered =
     active === "Semua"
       ? skills
-      : skills.filter((s) => s.category === active);
+      : skills.filter((s) => s.categories.includes(active));
 
+  // ✅ PERUBAHAN 2: Hitung jumlah item berdasarkan array categories
   const countByCategory = (cat: SkillCategory | "Semua") =>
     cat === "Semua"
       ? skills.length
-      : skills.filter((s) => s.category === cat).length;
+      : skills.filter((s) => s.categories.includes(cat)).length;
 
   return (
     <section className="max-w-6xl mx-auto px-6 pb-16">
-      <h2 className="text-2xl font-bold mb-2">
-        {"</> Keahlian"}
-      </h2>
+      <div className="mb-10">
+        <span className="inline-flex items-center rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-1 text-sm font-medium text-yellow-500">
+          Tech Stack
+        </span>
 
-      <p className="text-muted-foreground mb-6">
-        Keahlian profesional saya.
-      </p>
+        <h2 className="mt-4 text-3xl font-bold tracking-tight">
+          {"</> " + t("title")}
+        </h2>
+
+        <p className=" mt-4 max-w-2xl text-muted-foreground leading-7">
+          {t("description")}
+        </p>
+
+        <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2">
+          <span className="size-2 rounded-full bg-yellow-500 animate-pulse" />
+          <span className="text-sm font-medium">
+            {skills.length} Technologies
+          </span>
+        </div>
+      </div>
 
       {/* ================= TAB ================= */}
 
       <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-2 sm:gap-3 mb-8">
-        {tabs.map((tab) => {
-          const isActive = active === tab.value;
+        {tabValues.map((value) => {
+          const isActive = active === value;
 
           return (
             <button
-              key={tab.value}
-              onClick={() => setActive(tab.value)}
+              key={value}
+              onClick={() => setActive(value)}
               className="
                 relative
                 overflow-hidden
@@ -79,22 +105,18 @@ export function SkillsGrid() {
                   font-semibold
                   transition-colors
                   duration-300
-                  ${
-                    isActive
-                      ? "text-black"
-                      : "text-muted-foreground hover:text-foreground"
+                  ${isActive
+                    ? "text-black"
+                    : "text-muted-foreground hover:text-foreground"
                   }`}
               >
-                {tab.label}
+                {t(`tabs.${tabLabelKeys[value]}`)}
 
                 <span
-                  className={`rounded-full px-1.5 py-0.5 text-[10px] sm:text-xs ${
-                    isActive
-                      ? "bg-black/15"
-                      : "bg-muted"
-                  }`}
+                  className={`rounded-full px-1.5 py-0.5 text-[10px] sm:text-xs ${isActive ? "bg-black/15" : "bg-muted"
+                    }`}
                 >
-                  {countByCategory(tab.value)}
+                  {countByCategory(value)}
                 </span>
               </span>
             </button>
@@ -171,9 +193,7 @@ export function SkillsGrid() {
                     }}
                   />
 
-                  <span className="whitespace-nowrap">
-                    {skill.name}
-                  </span>
+                  <span className="whitespace-nowrap">{skill.name}</span>
                 </Badge>
               </motion.div>
             );

@@ -1,4 +1,8 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { ExternalLink } from "lucide-react";
+
 import {
   GmailIcon,
   InstagramIcon,
@@ -6,7 +10,11 @@ import {
   TiktokIcon,
   GithubIcon,
 } from "@/components/shared/social-icons";
-import { contactCards, type ContactCard } from "@/data/contact";
+
+import {
+  contactCards,
+  type ContactCard,
+} from "@/data/contact";
 
 const iconMap = {
   mail: GmailIcon,
@@ -16,7 +24,15 @@ const iconMap = {
   github: GithubIcon,
 };
 
-function Card({ card, large }: { card: ContactCard; large?: boolean }) {
+function Card({
+  card,
+  large,
+}: {
+  card: ContactCard;
+  large?: boolean;
+}) {
+  const t = useTranslations("contact.cards");
+
   const Icon = iconMap[card.icon];
 
   return (
@@ -26,24 +42,30 @@ function Card({ card, large }: { card: ContactCard; large?: boolean }) {
       }`}
     >
       <div className="relative z-10">
-        <h3 className="text-white font-semibold text-lg mb-1">
-          {card.title}
+        <h3 className="mb-1 text-lg font-semibold text-white">
+          {t(`${card.id}.title`)}
         </h3>
-        <p className="text-white/80 text-sm mb-5 max-w-xs">
-          {card.description}
+
+        <p className="mb-5 max-w-xs text-sm text-white/80">
+          {t(`${card.id}.description`)}
         </p>
+
         <a
           href={card.url}
-          target={card.url.startsWith("mailto:") ? undefined : "_blank"}
+          target={
+            card.url.startsWith("mailto:")
+              ? undefined
+              : "_blank"
+          }
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 bg-white/20 hover:bg-white/30 transition-colors text-white text-sm font-medium px-4 py-2 rounded-full backdrop-blur-sm"
+          className="inline-flex items-center gap-1.5 rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/30"
         >
-          {card.buttonLabel}
+          {t(`${card.id}.button`)}
           <ExternalLink className="size-3.5" />
         </a>
       </div>
 
-      <div className="absolute top-1/2 right-4 -translate-y-1/2 size-14 rounded-2xl border-2 border-white/40 bg-white/10 flex items-center justify-center backdrop-blur-sm">
+      <div className="absolute top-1/2 right-4 flex size-14 -translate-y-1/2 items-center justify-center rounded-2xl border-2 border-white/40 bg-white/10 backdrop-blur-sm">
         <Icon className="size-7 text-white" />
       </div>
     </div>
@@ -56,9 +78,10 @@ export function ContactCardGrid() {
   return (
     <div className="flex flex-col gap-4">
       <Card card={gmail} large />
-      <div className="grid sm:grid-cols-2 gap-4">
+
+      <div className="grid gap-4 sm:grid-cols-2">
         {rest.map((card) => (
-          <Card key={card.title} card={card} />
+          <Card key={card.id} card={card} />
         ))}
       </div>
     </div>

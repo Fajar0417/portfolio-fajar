@@ -1,100 +1,283 @@
+import { IconType } from "react-icons";
+import { FaLaravel, FaPhp, FaDatabase } from "react-icons/fa";
+import { SiTailwindcss, SiMysql } from "react-icons/si";
+
 export type ProjectType = "Web" | "Mobile";
+
 export type ProjectCategory =
-  | "Proyek Pribadi"
-  | "Magang"
+  | "Personal"
+  | "Internship"
   | "Freelance"
-  | "Lomba";
+  | "Competition";
 
 export interface TechStackItem {
   name: string;
-  description: string;
+  icon: IconType;
+  iconColor: string;
+  descriptionKey: string;
 }
 
 export interface Feature {
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
+}
+
+export interface Challenge {
+  titleKey: string;
+  descriptionKey: string;
 }
 
 export interface Project {
   id: string;
   slug: string;
-  name: string;
-  description: string;
-  longDescription: string;
+
+  nameKey: string;
+  descriptionKey: string;
+  longDescriptionKey: string;
+
   image: string;
   previewImage: string;
+
   url?: string;
   githubUrl?: string;
+
   views: number;
+
   type: ProjectType;
   category: ProjectCategory;
+
   featured?: boolean;
-  techStack: { name: string; icon: string; color: string }[];
+
+  techStack: {
+    name: string;
+    icon: IconType;
+    iconColor: string;
+  }[];
+
   techStackDetailed: TechStackItem[];
+
   features: Feature[];
-  challenges?: { title: string; description: string }[];
+
+  challenges?: Challenge[];
 }
 
 export const projects: Project[] = [
   {
-    id: "POS",
-    slug: "pos",
-    name: "POINT OF SALE (POS)",
-    description:
-      "Robust Fitness is a platform designed to help users achieve their fitness goals effectively and measurably.",
-    longDescription:
-      "Robust Fitness is a web platform designed to help users plan and track their fitness journey. It provides workout resources, progress tracking, and motivational tools in a clean, accessible interface. The platform is built on Laravel with a MySQL backend, serving a diverse user base ranging from beginners setting initial fitness goals to regular gym-goers tracking measurable progress over time.",
+    id: "pos",
+
+    slug: "point-of-sale",
+
+    nameKey: "items.pos.name",
+
+    descriptionKey: "items.pos.description",
+
+    longDescriptionKey: "items.pos.longDescription",
+
     image: "/images/projects/pm.png",
+
     previewImage: "/images/projects/pm.png",
+
     url: "https://kasir-kawali.inovindoacademy.com",
+
     githubUrl: "https://github.com/Fajar0417/KasirAja-.git",
+
     views: 165,
+
     type: "Web",
-    category: "Magang",
+
+    category: "Internship",
+
+    featured: true,
+
     techStack: [
-      { name: "PHP", icon: "php", color: "bg-indigo-700" },
-      { name: "Tailwind", icon: "~", color: "bg-teal-600" },
-      { name: "Laravel", icon: "L", color: "bg-red-700" },
-      { name: "MySQL", icon: "M", color: "bg-orange-700" },
-    ],
-    techStackDetailed: [
-      { name: "PHP", description: "Server-side application logic" },
       {
         name: "Laravel",
-        description:
-          "Full-featured MVC framework for routing, ORM, validation, and authentication",
+        icon: FaLaravel,
+        iconColor: "#FF2D20",
+      },
+      {
+        name: "PHP",
+        icon: FaPhp,
+        iconColor: "#777BB4",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        iconColor: "#06B6D4",
       },
       {
         name: "MySQL",
-        description:
-          "Relational database storing user profiles, workout plans, and progress records",
+        icon: SiMysql,
+        iconColor: "#4479A1",
       },
-      { name: "Tailwind CSS", description: "Responsive utility-first styling" },
     ],
+
+    techStackDetailed: [
+      {
+        name: "Laravel",
+        icon: FaLaravel,
+        iconColor: "#FF2D20",
+        descriptionKey: "items.pos.tech.laravel",
+      },
+      {
+        name: "PHP",
+        icon: FaPhp,
+        iconColor: "#777BB4",
+        descriptionKey: "items.pos.tech.php",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        iconColor: "#4479A1",
+        descriptionKey: "items.pos.tech.mysql",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        iconColor: "#06B6D4",
+        descriptionKey: "items.pos.tech.tailwind",
+      },
+    ],
+
     features: [
       {
-        title: "Workout Library",
-        description:
-          "A structured library of exercises and workout routines categorized by muscle group, difficulty, and equipment required, making it easy for users to find and plan sessions.",
+        titleKey: "items.pos.features.product.title",
+        descriptionKey: "items.pos.features.product.description",
       },
       {
-        title: "Progress Tracking",
-        description:
-          "Users log completed workouts and track metrics over time, with visual summaries showing consistency and improvement trends.",
+        titleKey: "items.pos.features.transaction.title",
+        descriptionKey: "items.pos.features.transaction.description",
       },
       {
-        title: "User Authentication",
-        description:
-          "Registration, login, and profile management with secure password hashing and session handling via Laravel's built-in auth scaffolding.",
+        titleKey: "items.pos.features.customer.title",
+        descriptionKey: "items.pos.features.customer.description",
       },
       {
-        title: "Responsive Interface",
-        description:
-          "Optimized for use on mobile devices where users are most likely to access the app during or after a workout session.",
+        titleKey: "items.pos.features.report.title",
+        descriptionKey: "items.pos.features.report.description",
       },
     ],
+
     challenges: [
-      // isi kalau ada
+      {
+        titleKey: "items.pos.challenges.stock.title",
+        descriptionKey: "items.pos.challenges.stock.description",
+      },
+      {
+        titleKey: "items.pos.challenges.dashboard.title",
+        descriptionKey: "items.pos.challenges.dashboard.description",
+      },
     ],
   },
+
+   {
+    id: "pkl",
+
+    slug: "sistem-pkl",
+
+    nameKey: "items.pkl.name",
+
+    descriptionKey: "items.pkl.description",
+
+    longDescriptionKey: "items.pkl.longDescription",
+
+    image: "/images/projects/pkl.png",
+
+    previewImage: "/images/projects/pkl.png",
+
+    url: "https://pkl.smkn1kawali.sch.id/PKL%20SMKN%201%20Kawali",
+
+    views: 0,
+
+    type: "Web",
+
+    category: "Internship",
+
+    featured: false,
+
+    techStack: [
+      {
+        name: "Laravel",
+        icon: FaLaravel,
+        iconColor: "#FF2D20",
+      },
+      {
+        name: "PHP",
+        icon: FaPhp,
+        iconColor: "#777BB4",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        iconColor: "#06B6D4",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        iconColor: "#4479A1",
+      },
+    ],
+
+    techStackDetailed: [
+      {
+        name: "Laravel",
+        icon: FaLaravel,
+        iconColor: "#FF2D20",
+        descriptionKey: "items.pkl.tech.laravel",
+      },
+      {
+        name: "PHP",
+        icon: FaPhp,
+        iconColor: "#777BB4",
+        descriptionKey: "items.pkl.tech.php",
+      },
+      {
+        name: "MySQL",
+        icon: SiMysql,
+        iconColor: "#4479A1",
+        descriptionKey: "items.pkl.tech.mysql",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        iconColor: "#06B6D4",
+        descriptionKey: "items.pkl.tech.tailwind",
+      },
+    ],
+
+    features: [
+      {
+        titleKey: "items.pkl.features.attendance.title",
+        descriptionKey: "items.pkl.features.attendance.description",
+      },
+      {
+        titleKey: "items.pkl.features.journal.title",
+        descriptionKey: "items.pkl.features.journal.description",
+      },
+      {
+        titleKey: "items.pkl.features.letters.title",
+        descriptionKey: "items.pkl.features.letters.description",
+      },
+      {
+        titleKey: "items.pkl.features.progress.title",
+        descriptionKey: "items.pkl.features.progress.description",
+      },
+      {
+        titleKey: "items.pkl.features.access.title",
+        descriptionKey: "items.pkl.features.access.description",
+      },
+      {
+        titleKey: "items.pkl.features.responsive.title",
+        descriptionKey: "items.pkl.features.responsive.description",
+      },
+    ],
+   challenges: [
+  {
+    titleKey: "items.pkl.challenges.approvalFlow.title",
+    descriptionKey: "items.pkl.challenges.approvalFlow.description",
+  },
+],
+  },
+
+  // project lainnya...
 ];

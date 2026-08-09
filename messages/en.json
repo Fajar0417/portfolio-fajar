@@ -1,0 +1,413 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "creations": "Creations",
+    "achievements": "Achievements",
+    "projects": "Projects",
+    "dashboard": "Dashboard",
+    "guestbook": "Guestbook",
+    "contact": "Contact",
+    "links": "Links"
+  },
+  "sidebar": {
+    "badge": "Building Cool Stuff",
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "creations": "Creations",
+      "achievements": "Achievements",
+      "projects": "Projects",
+      "dashboard": "Dashboard",
+      "guestbook": "Guestbook",
+      "contact": "Contact",
+      "links": "Links"
+    },
+    "loading": "Loading...",
+    "logout": "Logout",
+    "loginTitle": "Login",
+    "loginDescription": "Login to write in the Guestbook, react, and reply to comments.",
+    "continueGoogle": "Continue with Google",
+    "continueGithub": "Continue with GitHub",
+    "commandPalette": "Command Palette",
+    "copyright": "© 2026 Fajar Ferdiansyah",
+    "version": "Portfolio v2.0"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Fajar Ferdiansyah",
+    "location": "Based in Ciamis, Indonesia 🇮🇩",
+    "workMode": "Open to Onsite, Hybrid, or Remote work",
+    "paragraph1": "I am a <strong>Full Stack Web Developer</strong> focused on building modern, fast, and responsive websites. I have a strong interest in creating applications that are not only visually appealing but also have optimal performance and are easy to maintain.",
+    "paragraph2": "I currently work with technologies such as <strong>Next.js</strong>, <strong>Laravel</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, and <strong>MySQL</strong>. I also enjoy learning new technologies to keep improving the quality of the solutions I build.",
+    "paragraph3": "For me, writing code isn't just about making an application run — it's about creating a comfortable user experience, keeping the codebase maintainable, and delivering a product that genuinely benefits its users."
+  },
+  "skills": {
+    "title": "Skills",
+    "description": "My professional skills.",
+    "tabs": {
+      "all": "All",
+      "main": "Main",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "database": "Database",
+      "tools": "Tools"
+    }
+  },
+  "about": {
+    "title": "About",
+    "description": "A brief introduction about who I am.",
+    "paragraph1": "I'm <name>Fajar Ferdiansyah</name>, a Software Engineer based in Jambi, dedicated to building impactful digital solutions. I specialize in web platform and mobile app development using modern tech stacks, including Next.js, TypeScript, and native Android development with Kotlin.",
+    "paragraph2": "My main focus is designing software architecture that is not only functional but also well-structured, maintainable, and scalable to meet business needs. I believe high-quality code should go hand in hand with system efficiency and logical clarity.",
+    "paragraph3": "I combine technical expertise with proactive communication, critical thinking, and effective time management. I thrive in collaborative environments and leverage leadership skills to ensure every project delivers optimal results and real impact.",
+    "signOff": "Warm regards,"
+  },
+  "career": {
+    "badge": "Career Journey",
+    "title": "Career",
+    "description": "My professional journey building a career in technology.",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "tasks": "Responsibilities",
+    "learnings": "What I Learned",
+    "items": {
+      "inovindo": {
+        "duration": "5 months",
+        "type": "Internship",
+        "workMode": "Onsite",
+        "tasks": [
+          "Developed backend features for company projects using modern web technologies.",
+          "Designed and managed relational databases, including table structures and data optimization.",
+          "Assisted in planning and coordinating project development as a Project Manager intern.",
+          "Collaborated with frontend developers and designers to ensure smooth system integration.",
+          "Participated in testing, debugging, and deploying web applications."
+        ],
+        "learnings": [
+          "Strengthened backend development skills through real-world projects.",
+          "Learned database design, optimization, and API development.",
+          "Improved project planning, communication, and teamwork in a professional environment.",
+          "Experienced the complete software development lifecycle in an IT company."
+        ]
+      },
+      "freelance": {
+        "duration": "2025 - Present",
+        "type": "Freelance",
+        "workMode": "Remote",
+        "tasks": [
+          "Designed and developed full-stack web applications for clients.",
+          "Built responsive user interfaces using React, Next.js, Tailwind CSS, and TypeScript.",
+          "Developed backend systems, REST APIs, and database architectures.",
+          "Integrated authentication, cloud storage, and third-party services.",
+          "Maintained, optimized, and deployed web applications to production."
+        ],
+        "learnings": [
+          "Enhanced problem-solving and client communication skills.",
+          "Gained experience managing projects independently from planning to deployment.",
+          "Improved expertise in full-stack development and modern web technologies.",
+          "Learned to balance technical quality with client requirements and deadlines."
+        ]
+      }
+    }
+  },
+  "education": {
+    "badge": "Educational Background",
+    "title": "Education",
+    "description": "My academic journey through formal education.",
+    "achievements": "Achievements",
+    "items": {
+      "smkn1": {
+        "degree": "Software Engineering",
+        "level": "Vocational High School",
+        "major": "Software Engineering",
+        "school": "SMK Negeri 1 Kawali",
+        "location": "Ciamis, West Java, Indonesia 🇮🇩",
+        "period": "2022 - 2025",
+        "duration": "3 years",
+        "description": "Pursued vocational education with a focus on software development, web programming, databases, and industry practice to build job-ready skills in technology.",
+        "achievements": [
+          "Completed an industry internship at a technology company for several months.",
+          "Actively participated in web application development competitions and projects.",
+          "Gained a strong understanding of programming languages and modern frameworks.",
+          "Involved in school organizations and technology-related extracurricular activities.",
+          "Graduated with a satisfactory competency assessment score."
+        ]
+      }
+    }
+  },
+  "creations": {
+    "title": "Creations",
+    "description": "A collection of my coding content and creative works.",
+    "tiktok": "TikTok",
+    "instagram": "Instagram",
+    "showingCount": "Showing {count} posts",
+    "instagramEmpty": "Instagram content is not available yet."
+  },
+  "achievements": {
+    "title": "Achievements",
+    "description": "A collection of certificates and badges I have earned throughout my professional and academic journey.",
+    "search": "Search achievements...",
+    "filterType": "Filter by Type",
+    "filterCategory": "Filter by Category",
+    "allTypes": "All Types",
+    "allCategories": "All Categories",
+    "total": "Total: {count}",
+    "empty": "No matching achievements found.",
+    "types": {
+      "professional": "Professional",
+      "academic": "Academic",
+      "course": "Course"
+    },
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "mobile": "Mobile",
+      "freelance": "Freelance",
+      "course": "Course"
+    },
+    "achievementModal": {
+      "close": "Close",
+      "credentialId": "Credential ID",
+      "type": "Type",
+      "category": "Category",
+      "issueDate": "Issue Date",
+      "types": {
+        "professional": "Professional",
+        "academic": "Academic",
+        "course": "Course"
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A showcase of personal and open-source projects I've built.",
+    "type": "Type",
+    "category": "Category",
+    "all": "All",
+    "web": "Web",
+    "mobile": "Mobile",
+    "personal": "Personal",
+    "internship": "Internship",
+    "freelance": "Freelance",
+    "competition": "Competition",
+    "empty": "No projects found",
+    "emptyDescription": "Try changing the filters to see more projects.",
+    "resetFilter": "Reset Filter",
+    "back": "Back",
+    "views": "views",
+    "sourceCode": "Source Code",
+    "overview": "Overview",
+    "techStack": "Tech Stack",
+    "features": "Features",
+    "challenges": "Challenges",
+    "thanks": "Thanks for stopping by!",
+    "totalProjects": "Total Projects",
+    "webProjects": "Web Projects",
+    "mobileProjects": "Mobile Projects",
+    "projectsCount": "{count} Projects",
+    "projectSingular": "Project",
+    "projectPlural": "Projects",
+    "items": {
+      "pos": {
+        "name": "Kasir Aja - Point of Sale",
+        "description": "A POS system to efficiently manage store sales transactions.",
+        "longDescription": "Kasir Aja is a web-based Point of Sale application built to help store owners manage transactions, product stock, and sales reports in real time.",
+        "tech": {
+          "laravel": "Backend framework for routing, ORM, and authentication",
+          "php": "Server-side programming language",
+          "mysql": "Relational database for storing transaction and product data",
+          "tailwind": "Utility-first CSS framework for responsive styling"
+        },
+        "features": {
+          "product": {
+            "title": "Product Management",
+            "description": "Easily manage product data, categories, and stock."
+          },
+          "transaction": {
+            "title": "Sales Transactions",
+            "description": "Fast transaction processing with product search and automatic calculation."
+          },
+          "customer": {
+            "title": "Customer Management",
+            "description": "Store customer data for transaction history and loyalty."
+          },
+          "report": {
+            "title": "Sales Reports",
+            "description": "View daily, weekly, and monthly sales summaries."
+          }
+        },
+        "challenges": {
+          "stock": {
+            "title": "Stock Synchronization",
+            "description": "Ensuring product stock stays accurate during concurrent transactions."
+          },
+          "dashboard": {
+            "title": "Dashboard Performance",
+            "description": "Optimizing report queries to keep the dashboard responsive with large data."
+          }
+        }
+      },
+      "pkl": {
+        "name": "SMKN 1 Kawali Internship Management System",
+        "description": "An internship management platform to help students and schools digitally monitor internship activities.",
+        "longDescription": "The Internship System is a web application developed at the school's request to digitize the student internship (PKL) process. It includes location-based attendance, daily activity journals, automated letter management, and real-time progress monitoring by the school and industry supervisors.",
+        "tech": {
+          "laravel": "Backend framework for routing, ORM, and authentication",
+          "php": "Server-side programming language",
+          "mysql": "Relational database for storing student, journal, and attendance data",
+          "tailwind": "Utility-first CSS framework for responsive styling"
+        },
+        "features": {
+          "attendance": {
+            "title": "Geolocation Attendance",
+            "description": "Students check in for their internship with location validation (geolocation) to ensure attendance matches the internship site."
+          },
+          "journal": {
+            "title": "Digital Journal",
+            "description": "Students log daily internship activities digitally, which can be monitored directly by their supervising teacher."
+          },
+          "letters": {
+            "title": "Automated Letter Management",
+            "description": "Automatic creation and management of internship-related correspondence (introduction letters, reply letters, etc.)."
+          },
+          "progress": {
+            "title": "Real-Time Progress Monitoring",
+            "description": "Schools and supervisors can monitor each student's internship progress in real time."
+          },
+          "access": {
+            "title": "Advanced Layered Access",
+            "description": "A tiered role and permission system for students, supervising teachers, and school admins."
+          },
+          "responsive": {
+            "title": "Responsive Interface",
+            "description": "An optimal display experience on both desktop and mobile devices."
+          }
+        },
+        "challenges": {
+          "approvalFlow": {
+            "title": "Multi-Level Approval Workflow",
+            "description": "One of the biggest challenges was designing an internship placement submission flow involving multiple parties in sequence. Students submit their chosen internship site (IDUKA), which must first be approved by the Head of Study Program (Kaprog) for their respective major, then forwarded to the IDUKA, and finally the official letter is printed through the school's printing division. Ensuring each submission's status stayed synchronized and easily traceable at every stage was the most complex part of building this system."
+          }
+        }
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "description": "My personal dashboard built with Next.js API routes, visualizing development stats and contributions in real-time.",
+    "githubActivity": "GitHub Activity",
+    "githubDescription": "Open source contributions, repositories, and coding activity over the past year.",
+    "error": "Something went wrong on the server.",
+    "loading": "Loading data...",
+    "stats": {
+      "followers": "Followers",
+      "following": "Following",
+      "repos": "Repositories",
+      "contributions": "Contributions",
+      "thisWeek": "This Week",
+      "bestDay": "Best Day",
+      "dailyAvg": "Daily Average",
+      "perDay": "/ day"
+    },
+    "heatmap": {
+      "less": "Less",
+      "more": "More",
+      "contributionsTooltip": "{count} contributions"
+    },
+    "pinnedRepos": "Pinned Repositories"
+  },
+  "guestbook": {
+    "title": "Guestbook",
+    "description": "Feel free to share your thoughts, suggestions, questions, or anything else!",
+    "loading": "Loading...",
+    "writeMessage": "Write a message...",
+    "loginPrompt": "Please sign in to join the conversation. Don't worry, your data is safe with us.",
+    "loginGoogle": "Sign in with Google",
+    "loginGithub": "Sign in with GitHub"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Let's connect.",
+    "socialTitle": "Find me on social media",
+    "cards": {
+      "gmail": {
+        "title": "Stay Connected",
+        "description": "Reach out to me via email for questions or collaboration.",
+        "button": "Go to Gmail"
+      },
+      "instagram": {
+        "title": "Follow My Journey",
+        "description": "Follow my creative journey.",
+        "button": "Go to Instagram"
+      },
+      "linkedin": {
+        "title": "Let's Connect",
+        "description": "Connect with me professionally.",
+        "button": "Go to LinkedIn"
+      },
+      "tiktok": {
+        "title": "Join the Fun",
+        "description": "Watch fun and engaging content.",
+        "button": "Go to TikTok"
+      },
+      "github": {
+        "title": "Explore My Code",
+        "description": "Explore my open-source work.",
+        "button": "Go to GitHub"
+      }
+    },
+    "form": {
+      "title": "Or send me a message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully! I'll get back to you as soon as possible.",
+      "error": "Failed to send your message. Please try again or contact me via email."
+    }
+  },
+  "myCreations": {
+    "badge": "Creative Showcase",
+    "title": "My Creations",
+    "description": "Some of the work I've created, ranging from design, branding, photography, to video editing.",
+    "view": "View",
+    "items": {
+      "webdev": {
+        "title": "Web Development",
+        "category": "Web Development"
+      },
+      "photography": {
+        "title": "Photography & Videography",
+        "category": "Photography"
+      },
+      "design": {
+        "title": "Design Graphic",
+        "category": "Design"
+      }
+    }
+  },
+  "links": {
+    "role": "Software Engineer",
+    "location": "Ciamis, Indonesia",
+    "items": {
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Personal website & portfolio"
+      },
+      "monkeytype": {
+        "title": "Monkeytype",
+        "description": "Typing speed profile"
+      },
+      "saweria": {
+        "title": "Saweria",
+        "description": "Indonesian donation platform"
+      }
+    },
+    "contact": {
+      "title": "Contact Me",
+      "description": "Feel free to reach out for collaboration or just to say hello.",
+      "button": "Send Email"
+    }
+  }
+}

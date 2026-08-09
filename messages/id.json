@@ -1,0 +1,413 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "creations": "Kreasi",
+    "achievements": "Pencapaian",
+    "projects": "Proyek",
+    "dashboard": "Dasbor",
+    "guestbook": "Buku Tamu",
+    "contact": "Kontak",
+    "links": "Links"
+  },
+  "sidebar": {
+    "badge": "Sedang Membangun Sesuatu",
+    "menu": {
+      "home": "Beranda",
+      "about": "Tentang",
+      "creations": "Kreasi",
+      "achievements": "Pencapaian",
+      "projects": "Proyek",
+      "dashboard": "Dasbor",
+      "guestbook": "Buku Tamu",
+      "contact": "Kontak",
+      "links": "Links"
+    },
+    "loading": "Memuat...",
+    "logout": "Keluar",
+    "loginTitle": "Login",
+    "loginDescription": "Login untuk menulis Guestbook, memberikan reaction, dan membalas komentar.",
+    "continueGoogle": "Lanjutkan dengan Google",
+    "continueGithub": "Lanjutkan dengan GitHub",
+    "commandPalette": "Palet Perintah",
+    "copyright": "© 2026 Fajar Ferdiansyah",
+    "version": "Portfolio v2.0"
+  },
+  "hero": {
+    "greeting": "Halo, saya",
+    "name": "Fajar Ferdiansyah",
+    "location": "Berdomisili di Ciamis, Indonesia 🇮🇩",
+    "workMode": "Terbuka untuk Onsite, Hybrid, maupun Remote",
+    "paragraph1": "Saya adalah seorang <strong>Full Stack Web Developer</strong> yang berfokus pada pengembangan website modern, cepat, dan responsif. Saya memiliki ketertarikan besar dalam membangun aplikasi yang tidak hanya memiliki tampilan menarik, tetapi juga memiliki performa yang optimal dan mudah dikembangkan.",
+    "paragraph2": "Saat ini saya banyak menggunakan teknologi seperti <strong>Next.js</strong>, <strong>Laravel</strong>, <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, dan <strong>MySQL</strong>. Saya juga senang mempelajari teknologi baru untuk terus meningkatkan kualitas solusi yang saya bangun.",
+    "paragraph3": "Bagi saya, menulis kode bukan sekadar membuat aplikasi berjalan, tetapi juga menciptakan pengalaman pengguna yang nyaman, menjaga kualitas kode agar mudah dipelihara, dan menghasilkan produk yang benar-benar memberikan manfaat bagi penggunanya."
+  },
+  "skills": {
+    "title": "Keahlian",
+    "description": "Keahlian profesional saya.",
+    "tabs": {
+      "all": "Semua",
+      "main": "Utama",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "database": "Database",
+      "tools": "Tools"
+    }
+  },
+  "about": {
+    "title": "Tentang",
+    "description": "Pengenalan singkat mengenai siapa saya.",
+    "paragraph1": "Saya <name>Fajar Ferdiansyah</name>, seorang Software Engineer yang berbasis di Jambi, berdedikasi untuk membangun solusi digital yang berdampak. Saya spesialis dalam pengembangan platform web dan aplikasi mobile menggunakan tech stack modern, termasuk Next.js, TypeScript, dan pengembangan Android native dengan Kotlin.",
+    "paragraph2": "Fokus utama saya adalah merancang arsitektur perangkat lunak yang tidak hanya berfungsi tetapi juga terstruktur dengan baik, mudah dipelihara, dan skalabel untuk memenuhi kebutuhan bisnis. Saya percaya bahwa kode berkualitas tinggi harus berjalan beriringan dengan efisiensi sistem dan kejelasan logika.",
+    "paragraph3": "Saya memadukan keahlian teknis dengan komunikasi proaktif, berpikir kritis, dan manajemen waktu yang efektif. Saya berkembang dalam lingkungan kolaboratif dan memanfaatkan keterampilan kepemimpinan untuk memastikan setiap proyek memberikan hasil optimal dan dampak nyata.",
+    "signOff": "Salam hangat,"
+  },
+  "career": {
+    "badge": "Perjalanan Karier",
+    "title": "Karier",
+    "description": "Perjalanan profesional saya dalam membangun karier di bidang teknologi.",
+    "showDetails": "Tampilkan detail",
+    "hideDetails": "Sembunyikan detail",
+    "tasks": "Tugas",
+    "learnings": "Apa yang Saya Pelajari",
+    "items": {
+      "inovindo": {
+        "duration": "5 bulan",
+        "type": "Magang",
+        "workMode": "Onsite",
+        "tasks": [
+          "Mengembangkan fitur backend untuk proyek perusahaan menggunakan teknologi web modern.",
+          "Merancang dan mengelola basis data relasional, termasuk struktur tabel dan optimasi data.",
+          "Membantu perencanaan dan koordinasi pengembangan proyek sebagai Project Manager magang.",
+          "Berkolaborasi dengan frontend developer dan desainer untuk memastikan integrasi sistem berjalan lancar.",
+          "Berpartisipasi dalam pengujian, debugging, dan deployment aplikasi web."
+        ],
+        "learnings": [
+          "Memperkuat kemampuan backend development melalui proyek nyata.",
+          "Mempelajari desain basis data, optimasi, dan pengembangan API.",
+          "Meningkatkan perencanaan proyek, komunikasi, dan kerja tim di lingkungan profesional.",
+          "Mengalami siklus pengembangan software secara lengkap di perusahaan IT."
+        ]
+      },
+      "freelance": {
+        "duration": "2025 - Sekarang",
+        "type": "Freelance",
+        "workMode": "Jarak Jauh",
+        "tasks": [
+          "Merancang dan mengembangkan aplikasi web full-stack untuk klien.",
+          "Membangun antarmuka pengguna yang responsif menggunakan React, Next.js, Tailwind CSS, dan TypeScript.",
+          "Mengembangkan sistem backend, REST API, dan arsitektur basis data.",
+          "Mengintegrasikan autentikasi, penyimpanan cloud, dan layanan pihak ketiga.",
+          "Memelihara, mengoptimalkan, dan melakukan deployment aplikasi web ke production."
+        ],
+        "learnings": [
+          "Meningkatkan kemampuan problem-solving dan komunikasi dengan klien.",
+          "Mendapatkan pengalaman mengelola proyek secara mandiri dari perencanaan hingga deployment.",
+          "Meningkatkan keahlian dalam full-stack development dan teknologi web modern.",
+          "Belajar menyeimbangkan kualitas teknis dengan kebutuhan klien dan tenggat waktu."
+        ]
+      }
+    }
+  },
+  "education": {
+    "badge": "Riwayat Pendidikan",
+    "title": "Pendidikan",
+    "description": "Perjalanan akademis saya dalam menempuh pendidikan formal.",
+    "achievements": "Pencapaian",
+    "items": {
+      "smkn1": {
+        "degree": "Rekayasa Perangkat Lunak",
+        "level": "SMK",
+        "major": "Rekayasa Perangkat Lunak",
+        "school": "SMK Negeri 1 Kawali",
+        "location": "Ciamis, Jawa Barat, Indonesia 🇮🇩",
+        "period": "2022 - 2025",
+        "duration": "3 tahun",
+        "description": "Menempuh pendidikan kejuruan dengan fokus pada pengembangan perangkat lunak, pemrograman web, basis data, dan praktik industri untuk mempersiapkan keterampilan siap kerja di bidang teknologi.",
+        "achievements": [
+          "Menyelesaikan Praktik Kerja Lapangan di perusahaan teknologi selama beberapa bulan.",
+          "Aktif mengikuti kompetisi dan proyek pengembangan aplikasi web.",
+          "Memperoleh pemahaman kuat dalam bahasa pemrograman dan framework modern.",
+          "Terlibat dalam organisasi sekolah dan kegiatan ekstrakurikuler teknologi.",
+          "Lulus dengan nilai kompetensi keahlian yang memuaskan."
+        ]
+      }
+    }
+  },
+  "creations": {
+    "title": "Kreasi",
+    "description": "Kumpulan konten coding dan karya kreatif saya.",
+    "tiktok": "TikTok",
+    "instagram": "Instagram",
+    "showingCount": "Menampilkan {count} konten",
+    "instagramEmpty": "Konten Instagram belum tersedia."
+  },
+  "achievements": {
+    "title": "Pencapaian",
+    "description": "Koleksi sertifikat dan lencana yang telah saya raih sepanjang perjalanan profesional dan akademik saya.",
+    "search": "Cari pencapaian...",
+    "filterType": "Filter berdasarkan Tipe",
+    "filterCategory": "Filter berdasarkan Kategori",
+    "allTypes": "Semua Tipe",
+    "allCategories": "Semua Kategori",
+    "total": "Total: {count}",
+    "empty": "Tidak ada pencapaian yang cocok.",
+    "types": {
+      "professional": "Profesional",
+      "academic": "Akademik",
+      "course": "Kursus"
+    },
+    "categories": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "mobile": "Mobile",
+      "freelance": "Freelance",
+      "course": "Course"
+    },
+    "achievementModal": {
+      "close": "Tutup",
+      "credentialId": "Credential ID",
+      "type": "Tipe",
+      "category": "Kategori",
+      "issueDate": "Tanggal Terbit",
+      "types": {
+        "professional": "Profesional",
+        "academic": "Akademik",
+        "course": "Kursus"
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyek",
+    "description": "Etalase proyek pribadi maupun sumber terbuka yang telah saya bangun.",
+    "type": "Tipe",
+    "category": "Kategori",
+    "all": "Semua",
+    "web": "Web",
+    "mobile": "Mobile",
+    "personal": "Pribadi",
+    "internship": "Magang",
+    "freelance": "Freelance",
+    "competition": "Lomba",
+    "empty": "Tidak ada proyek ditemukan",
+    "emptyDescription": "Coba ubah filter untuk melihat proyek lainnya.",
+    "resetFilter": "Reset Filter",
+    "back": "Kembali",
+    "views": "tayangan",
+    "sourceCode": "Kode Sumber",
+    "overview": "Ikhtisar",
+    "techStack": "Tech Stack",
+    "features": "Fitur",
+    "challenges": "Tantangan",
+    "thanks": "Terima kasih sudah mampir!",
+    "totalProjects": "Total Proyek",
+    "webProjects": "Proyek Web",
+    "mobileProjects": "Proyek Mobile",
+    "projectsCount": "{count} Proyek",
+    "projectSingular": "Proyek",
+    "projectPlural": "Proyek",
+    "items": {
+      "pos": {
+        "name": "Kasir Aja - Point of Sale",
+        "description": "Sistem kasir untuk mengelola transaksi penjualan toko secara efisien.",
+        "longDescription": "Kasir Aja adalah aplikasi Point of Sale berbasis web yang dibangun untuk membantu pemilik toko mengelola transaksi, stok produk, dan laporan penjualan secara real-time.",
+        "tech": {
+          "laravel": "Framework backend untuk routing, ORM, dan autentikasi",
+          "php": "Bahasa pemrograman sisi server",
+          "mysql": "Database relasional untuk menyimpan data transaksi dan produk",
+          "tailwind": "Utility-first CSS framework untuk styling responsif"
+        },
+        "features": {
+          "product": {
+            "title": "Manajemen Produk",
+            "description": "Kelola data produk, kategori, dan stok dengan mudah."
+          },
+          "transaction": {
+            "title": "Transaksi Penjualan",
+            "description": "Proses transaksi cepat dengan pencarian produk dan perhitungan otomatis."
+          },
+          "customer": {
+            "title": "Manajemen Pelanggan",
+            "description": "Simpan data pelanggan untuk riwayat transaksi dan loyalitas."
+          },
+          "report": {
+            "title": "Laporan Penjualan",
+            "description": "Lihat ringkasan penjualan harian, mingguan, dan bulanan."
+          }
+        },
+        "challenges": {
+          "stock": {
+            "title": "Sinkronisasi Stok",
+            "description": "Memastikan stok produk selalu akurat saat terjadi transaksi bersamaan."
+          },
+          "dashboard": {
+            "title": "Performa Dashboard",
+            "description": "Mengoptimalkan query laporan agar dashboard tetap responsif dengan data besar."
+          }
+        }
+      },
+      "pkl": {
+        "name": "Sistem Manajemen PKL SMKN 1 Kawali",
+        "description": "Platform manajemen praktik kerja lapangan untuk memudahkan siswa dan sekolah memantau kegiatan magang secara digital.",
+        "longDescription": "Sistem PKL adalah aplikasi web yang dikembangkan atas permintaan sekolah untuk mendigitalisasi proses Praktik Kerja Lapangan (PKL) siswa. Aplikasi ini mencakup absensi berbasis lokasi, jurnal kegiatan harian, manajemen surat otomatis, hingga pemantauan progres siswa secara real-time oleh pihak sekolah dan pembimbing industri.",
+        "tech": {
+          "laravel": "Framework backend untuk routing, ORM, dan autentikasi",
+          "php": "Bahasa pemrograman sisi server",
+          "mysql": "Database relasional untuk menyimpan data siswa, jurnal, dan absensi",
+          "tailwind": "Utility-first CSS framework untuk styling responsif"
+        },
+        "features": {
+          "attendance": {
+            "title": "Absensi Geolocation",
+            "description": "Siswa melakukan absensi PKL dengan validasi lokasi (geolocation) untuk memastikan kehadiran sesuai tempat magang."
+          },
+          "journal": {
+            "title": "Jurnal Digital",
+            "description": "Siswa mencatat kegiatan harian PKL secara digital yang dapat dipantau langsung oleh guru pembimbing."
+          },
+          "letters": {
+            "title": "Manajemen Surat Otomatis",
+            "description": "Pembuatan dan pengelolaan surat-menyurat terkait PKL (surat pengantar, surat balasan, dll) secara otomatis."
+          },
+          "progress": {
+            "title": "Monitor Progres Real-Time",
+            "description": "Sekolah dan pembimbing dapat memantau progres kegiatan PKL setiap siswa secara real-time."
+          },
+          "access": {
+            "title": "Akses Berlapis Lanjut",
+            "description": "Sistem role dan hak akses bertingkat untuk siswa, guru pembimbing, dan admin sekolah."
+          },
+          "responsive": {
+            "title": "Antarmuka Responsif",
+            "description": "Tampilan yang optimal digunakan di perangkat desktop maupun mobile."
+          }
+        },
+        "challenges": {
+          "approvalFlow": {
+            "title": "Alur Persetujuan Bertingkat",
+            "description": "Salah satu tantangan terbesar adalah merancang alur pengajuan tempat PKL yang melibatkan banyak pihak secara berurutan. Siswa mengajukan tempat magang (IDUKA) yang harus disetujui oleh Kepala Program Keahlian (Kaprog) sesuai jurusan masing-masing terlebih dahulu, baru kemudian diteruskan ke pihak IDUKA, dan terakhir surat resmi dicetak melalui bagian percetakan sekolah. Memastikan status setiap pengajuan tetap sinkron dan mudah dilacak di setiap tahap menjadi bagian paling kompleks dalam pengembangan sistem ini."
+          }
+        }
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Dasbor",
+    "description": "Dasbor pribadi saya yang dibangun dengan rute API Next.js, memvisualisasikan statistik pengembangan dan kontribusi secara real-time.",
+    "githubActivity": "Aktivitas GitHub",
+    "githubDescription": "Kontribusi open source, repositori, dan aktivitas coding selama setahun terakhir.",
+    "error": "Terjadi kesalahan pada server.",
+    "loading": "Memuat data...",
+    "stats": {
+      "followers": "Pengikut",
+      "following": "Mengikuti",
+      "repos": "Repositori",
+      "contributions": "Kontribusi",
+      "thisWeek": "Minggu Ini",
+      "bestDay": "Hari Terbaik",
+      "dailyAvg": "Rata-rata Harian",
+      "perDay": "/ hari"
+    },
+    "heatmap": {
+      "less": "Sedikit",
+      "more": "Banyak",
+      "contributionsTooltip": "{count} kontribusi"
+    },
+    "pinnedRepos": "Repositori Disematkan"
+  },
+  "guestbook": {
+    "title": "Buku Tamu",
+    "description": "Jangan ragu untuk berbagi pemikiran, saran, pertanyaan, atau apa pun!",
+    "loading": "Memuat...",
+    "writeMessage": "Tulis pesan...",
+    "loginPrompt": "Silakan masuk untuk bergabung dalam percakapan. Jangan khawatir, data Anda aman bersama kami.",
+    "loginGoogle": "Masuk dengan Google",
+    "loginGithub": "Masuk dengan GitHub"
+  },
+  "contact": {
+    "title": "Kontak",
+    "description": "Mari saling terhubung.",
+    "socialTitle": "Temukan saya di media sosial",
+    "cards": {
+      "gmail": {
+        "title": "Tetap Terhubung",
+        "description": "Hubungi saya melalui email untuk pertanyaan atau kolaborasi.",
+        "button": "Pergi ke Gmail"
+      },
+      "instagram": {
+        "title": "Ikuti Perjalanan Saya",
+        "description": "Ikuti perjalanan kreatif saya.",
+        "button": "Pergi ke Instagram"
+      },
+      "linkedin": {
+        "title": "Mari Terhubung",
+        "description": "Terhubung dengan saya secara profesional.",
+        "button": "Pergi ke Linkedin"
+      },
+      "tiktok": {
+        "title": "Bergabung dalam Keseruan",
+        "description": "Tonton konten yang menarik dan menyenangkan.",
+        "button": "Pergi ke Tiktok"
+      },
+      "github": {
+        "title": "Jelajahi Kode",
+        "description": "Jelajahi karya sumber terbuka saya.",
+        "button": "Pergi ke Github"
+      }
+    },
+    "form": {
+      "title": "Atau kirimkan saya pesan",
+      "name": "Nama",
+      "email": "Email",
+      "message": "Pesan",
+      "send": "Kirim Pesan",
+      "sending": "Mengirim...",
+      "success": "Pesan berhasil dikirim! Saya akan membalas secepatnya.",
+      "error": "Gagal mengirim pesan. Silakan coba lagi atau hubungi saya melalui email."
+    }
+  },
+  "myCreations": {
+    "badge": "Karya Kreatif",
+    "title": "Karya Saya",
+    "description": "Beberapa hasil karya yang pernah saya buat, mulai dari desain, branding, fotografi hingga video editing.",
+    "view": "Lihat",
+    "items": {
+      "webdev": {
+        "title": "Pengembangan Web",
+        "category": "Pengembangan Web"
+      },
+      "photography": {
+        "title": "Fotografi & Videografi",
+        "category": "Fotografi"
+      },
+      "design": {
+        "title": "Desain Grafis",
+        "category": "Desain"
+      }
+    }
+  },
+  "links": {
+    "role": "Insinyur Perangkat Lunak",
+    "location": "Ciamis, Indonesia",
+    "items": {
+      "portfolio": {
+        "title": "Portofolio",
+        "description": "Website pribadi & portofolio"
+      },
+      "monkeytype": {
+        "title": "Monkeytype",
+        "description": "Profil kecepatan mengetik"
+      },
+      "saweria": {
+        "title": "Saweria",
+        "description": "Platform donasi Indonesia"
+      }
+    },
+    "contact": {
+      "title": "Hubungi Saya",
+      "description": "Jangan ragu untuk menghubungi saya untuk berkolaborasi atau sekadar mengobrol.",
+      "button": "Kirim Email"
+    }
+  }
+}

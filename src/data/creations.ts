@@ -2,24 +2,21 @@ import tiktokData from "@/data/tiktok.json";
 
 export const creations = [
   {
-    title: "SakuHijau",
-    category: "Web Development",
-    image: "/images/creations/sakuhijau.jpg",
-    tech: ["Next.js", "Laravel", "Tailwind"],
+    id: "webdev",
+    image: "/images/creations/webdev.png",
+    tech: ["Next.js", "TypeScript", "Supabase"],
     href: "#",
   },
   {
-    title: "Visual Nexora",
-    category: "Photography",
-    image: "/images/creations/photo.jpg",
+    id: "photography",
+    image: "/images/creations/fotograpi.jpeg",
     tech: ["Lightroom"],
     href: "#",
   },
   {
-    title: "Company Profile",
-    category: "Videography",
-    image: "/images/creations/video.jpg",
-    tech: ["Premiere Pro", "After Effects"],
+    id: "design",
+    image: "/images/creations/design.jpeg",
+    tech: ["Premiere Pro", "After Effects", "Canva"],
     href: "#",
   },
 ];

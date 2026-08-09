@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { GitBranch } from "lucide-react";
 import { StatsGrid } from "@/components/sections/stats-card";
 import { ContributionHeatmap } from "@/components/sections/contribution-heatmap";
@@ -23,9 +24,10 @@ interface GithubData {
   }[];
 }
 
-const GITHUB_USERNAME = "satriabahari"; // ganti sesuai username kamu
+const GITHUB_USERNAME = "Fajar0417"; // ganti sesuai username kamu
 
 export default function DashboardPage() {
+  const t = useTranslations("dashboard");
   const [data, setData] = useState<GithubData | null>(null);
   const [error, setError] = useState(false);
 
@@ -40,23 +42,16 @@ export default function DashboardPage() {
   }, []);
 
   return (
-   <section className="max-w-6xl mx-auto px-8 py-12">
-      <h1 className="text-2xl font-bold mb-2">Dasbor</h1>
-      <p className="text-muted-foreground mb-10">
-        Dasbor pribadi saya yang dibangun dengan rute API Next.js,
-        memvisualisasikan statistik pengembangan dan kontribusi secara
-        real-time.
-      </p>
+    <section className="max-w-6xl mx-auto px-8 py-12">
+      <h1 className="text-2xl font-bold mb-2">{t("title")}</h1>
+      <p className="text-muted-foreground mb-10">{t("description")}</p>
 
       <div className="flex items-center gap-2 mb-2">
         <GitBranch className="size-5" />
-        <h2 className="text-xl font-semibold">Aktivitas GitHub</h2>
+        <h2 className="text-xl font-semibold">{t("githubActivity")}</h2>
       </div>
       <div className="flex items-center justify-between mb-6">
-        <p className="text-muted-foreground">
-          Kontribusi open source, repositori, dan aktivitas coding selama
-          setahun terakhir.
-        </p>
+        <p className="text-muted-foreground">{t("githubDescription")}</p>
         <span className="text-muted-foreground text-sm shrink-0 ml-4">
           @{GITHUB_USERNAME}
         </span>
@@ -64,13 +59,13 @@ export default function DashboardPage() {
 
       {error && (
         <p className="text-muted-foreground text-center py-8">
-          😔 Terjadi kesalahan pada server.
+          😔 {t("error")}
         </p>
       )}
 
       {!error && !data && (
         <p className="text-muted-foreground text-center py-8">
-          Memuat data...
+          {t("loading")}
         </p>
       )}
 
