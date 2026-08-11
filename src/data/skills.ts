@@ -145,36 +145,36 @@ export const skills: Skill[] = [
     icon: SiVite,
     iconColor: "#646CFF",
   },
-  {
-    name: "Astro.js",
-    categories: ["Frontend"],
-    icon: SiAstro,
-    iconColor: "#FF5D01",
-  },
+  // {
+  //   name: "Astro.js",
+  //   categories: ["Frontend"],
+  //   icon: SiAstro,
+  //   iconColor: "#FF5D01",
+  // },
   {
     name: "NextAuth.js",
     categories: ["Frontend"],
     icon: SiAuth0,
     iconColor: "#EB5424",
   },
-  {
-    name: "TanStack",
-    categories: ["Frontend"],
-    icon: SiTanstack,
-    iconColor: "#FF4154",
-  },
+  // {
+  //   name: "TanStack",
+  //   categories: ["Frontend"],
+  //   icon: SiTanstack,
+  //   iconColor: "#FF4154",
+  // },
   {
     name: "Axios",
     categories: ["Frontend"],
     icon: SiAxios,
     iconColor: "#5A29E4",
   },
-  {
-    name: "Zod",
-    categories: ["Frontend"],
-    icon: SiZod,
-    iconColor: "#3E67B1",
-  },
+  // {
+  //   name: "Zod",
+  //   categories: ["Frontend"],
+  //   icon: SiZod,
+  //   iconColor: "#3E67B1",
+  // },
   {
     name: "Framer Motion",
     categories: ["Frontend"],
@@ -201,30 +201,30 @@ export const skills: Skill[] = [
     icon: FaNodeJs,
     iconColor: "#5FA04E",
   },
-  {
-    name: "Express.js",
-    categories: ["Backend"],
-    icon: SiExpress,
-    iconColor: "#FFFFFF",
-  },
-  {
-    name: "Go",
-    categories: ["Backend"],
-    icon: SiGo,
-    iconColor: "#00ADD8",
-  },
-  {
-    name: "Gin Gonic",
-    categories: ["Backend"],
-    icon: SiGin,
-    iconColor: "#00ADD8",
-  },
-  {
-    name: "Swagger",
-    categories: ["Backend"],
-    icon: SiSwagger,
-    iconColor: "#85EA2D",
-  },
+  // {
+  //   name: "Express.js",
+  //   categories: ["Backend"],
+  //   icon: SiExpress,
+  //   iconColor: "#FFFFFF",
+  // },
+  // {
+  //   name: "Go",
+  //   categories: ["Backend"],
+  //   icon: SiGo,
+  //   iconColor: "#00ADD8",
+  // },
+  // {
+  //   name: "Gin Gonic",
+  //   categories: ["Backend"],
+  //   icon: SiGin,
+  //   iconColor: "#00ADD8",
+  // },
+  // {
+  //   name: "Swagger",
+  //   categories: ["Backend"],
+  //   icon: SiSwagger,
+  //   iconColor: "#85EA2D",
+  // },
 
   // --- MOBILE (Data Lama) ---
   {
