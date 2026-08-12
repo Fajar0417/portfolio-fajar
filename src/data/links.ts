@@ -17,7 +17,7 @@ export const socialLinks: SocialLink[] = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/fajar-aja", icon: "linkedin" },
   { name: "Instagram", url: "https://instagram.com/fajar_jay17", icon: "instagram" },
   { name: "TikTok", url: "https://tiktok.com/@jayajahhh", icon: "tiktok" },
-  { name: "Threads", url: "https://threads.net/@#", icon: "threads" },
+  { name: "Threads", url: "https://www.threads.com/@fajar_jay17", icon: "threads" },
 ];
 
 export const linkItems: LinkItem[] = [
@@ -25,14 +25,14 @@ export const linkItems: LinkItem[] = [
     id: "portfolio",
     title: "Portofolio",
     description: "Website pribadi & portofolio",
-    url: "https://satriabahari.my.id",
+    url: "https://portfolio-fajar-sand.vercel.app",
     icon: "globe",
   },
   {
     id: "monkeytype",
     title: "Monkeytype",
     description: "Profil kecepatan mengetik",
-    url: "https://monkeytype.com",
+    url: "https://monkeytype.com/profile/FajarDev",
     icon: "keyboard",
   },
   {
