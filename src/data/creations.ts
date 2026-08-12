@@ -1,4 +1,4 @@
-import tiktokData from "@/data/tiktok.json";
+import tiktokData from "./tiktok.json";
 
 export const creations = [
   {
@@ -26,7 +26,7 @@ export interface CreationVideo {
   title: string;
   thumbnail: string;
   url: string;
-  video?: string;
+ video?: string | null;
   createdAt: string;
   duration?: number;
 
@@ -104,4 +104,5 @@ export const tiktokProfile: CreationProfile = {
   totalVideos: tiktokData.length,
 };
 
-export const tiktokVideos: CreationVideo[] = tiktokData;
+
+export const tiktokVideos = tiktokData as CreationVideo[];
