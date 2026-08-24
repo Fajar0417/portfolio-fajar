@@ -178,98 +178,104 @@ export default async function ProjectDetailPage({
           {t("techStack")}
         </h2>
 
-        <div className="grid gap-5">
-          {project.techStackDetailed.map((tech) => {
-            const key = techTranslationKey[tech.name];
-            const Icon = tech.icon;
+         <div className="grid gap-5">
+    {project.techStackDetailed.map((tech) => {
+      const Icon = tech.icon;
 
-            return (
-              <div
-                key={tech.name}
-                className="rounded-2xl border border-border bg-card p-6"
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="size-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
-                    <Icon className="size-5" style={{ color: tech.iconColor }} />
-                  </span>
-                  <h3 className="font-semibold text-lg">{tech.name}</h3>
-                </div>
-                <p className="text-muted-foreground leading-7">
-                  {t(`items.${project.id}.tech.${key}`)}
-                </p>
-              </div>
-            );
-          })}
+      return (
+        <div
+          key={tech.name}
+          className="rounded-2xl border border-border bg-card p-6"
+        >
+          <div className="flex items-center gap-3 mb-2">
+            <span className="size-10 rounded-lg bg-muted flex items-center justify-center shrink-0">
+              <Icon
+                className="size-5"
+                style={{ color: tech.iconColor }}
+              />
+            </span>
+
+            <h3 className="font-semibold text-lg">
+              {tech.name}
+            </h3>
+          </div>
+
+          <p className="text-muted-foreground leading-7">
+            {t(tech.descriptionKey)}
+          </p>
         </div>
+      );
+    })}
+  </div>
       </section>
 
       <SectionDivider />
 
       {/* Features */}
-<div className="grid gap-6">
-  <h2 className="flex items-center gap-3 text-2xl font-bold mb-8">
-    <Sparkles className="size-6 text-accent" />
-    {t("features")}
-  </h2>
-
-  {project.features.map((feature) => (
-    <div
-      key={feature.titleKey}
-      className="group rounded-2xl border border-border bg-card p-6 transition-all hover:border-accent hover:shadow-lg"
-    >
-      <div className="flex items-start gap-4">
-        <div className="mt-1 flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-green-500 bg-green-500/10">
-          <span className="text-lg font-bold text-green-500">✓</span>
-        </div>
-
-        <div className="flex-1">
-          <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-accent">
-            {t(feature.titleKey)}
-          </h3>
-
-          <p className="leading-7 text-muted-foreground">
-            {t(feature.descriptionKey)}
-          </p>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
-      <SectionDivider />
-      {/* Challenges */}
-{project.challenges && project.challenges.length > 0 && (
-  <>
-    <section className="mb-16">
-      <h2 className="flex items-center gap-3 text-2xl font-bold mb-8">
-        <TriangleAlert className="size-6 text-yellow-500" />
-        {t("challenges")}
-      </h2>
-
       <div className="grid gap-6">
-        {project.challenges.map((challenge) => (
+        <h2 className="flex items-center gap-3 text-2xl font-bold mb-8">
+          <Sparkles className="size-6 text-accent" />
+          {t("features")}
+        </h2>
+
+        {project.features.map((feature) => (
           <div
-            key={challenge.titleKey}
-            className="rounded-2xl border border-yellow-500/30 bg-yellow-500/5 p-6"
+            key={feature.titleKey}
+            className="group rounded-2xl border border-border bg-card p-6 transition-all hover:border-accent hover:shadow-lg"
           >
-            <div className="flex gap-4">
-              <div className="mt-1 flex size-10 items-center justify-center rounded-xl bg-yellow-500/10 shrink-0">
-                <TriangleAlert className="size-5 text-yellow-500" />
+            <div className="flex items-start gap-4">
+              <div className="mt-1 flex size-10 shrink-0 items-center justify-center rounded-full border-2 border-green-500 bg-green-500/10">
+                <span className="text-lg font-bold text-green-500">✓</span>
               </div>
-              <div>
-                <h3 className="text-lg font-semibold mb-2">
-                  {t(challenge.titleKey)}
+
+              <div className="flex-1">
+                <h3 className="mb-2 text-lg font-semibold transition-colors group-hover:text-accent">
+                  {t(feature.titleKey)}
                 </h3>
+
                 <p className="leading-7 text-muted-foreground">
-                  {t(challenge.descriptionKey)}
+                  {t(feature.descriptionKey)}
                 </p>
               </div>
             </div>
           </div>
         ))}
       </div>
-    </section>
-  </>
-)}
+      <SectionDivider />
+      {/* Challenges */}
+      {project.challenges && project.challenges.length > 0 && (
+        <>
+          <section className="mb-16">
+            <h2 className="flex items-center gap-3 text-2xl font-bold mb-8">
+              <TriangleAlert className="size-6 text-yellow-500" />
+              {t("challenges")}
+            </h2>
+
+            <div className="grid gap-6">
+              {project.challenges.map((challenge) => (
+                <div
+                  key={challenge.titleKey}
+                  className="rounded-2xl border border-yellow-500/30 bg-yellow-500/5 p-6"
+                >
+                  <div className="flex gap-4">
+                    <div className="mt-1 flex size-10 items-center justify-center rounded-xl bg-yellow-500/10 shrink-0">
+                      <TriangleAlert className="size-5 text-yellow-500" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {t(challenge.titleKey)}
+                      </h3>
+                      <p className="leading-7 text-muted-foreground">
+                        {t(challenge.descriptionKey)}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
 
       {/* Bottom Footer */}
       <footer className="mt-20 border-t border-border pt-10 flex flex-col md:flex-row items-center justify-between gap-6">

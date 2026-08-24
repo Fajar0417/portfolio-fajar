@@ -289,6 +289,42 @@
             "description": "One of the biggest challenges was designing an internship placement submission flow involving multiple parties in sequence. Students submit their chosen internship site (IDUKA), which must first be approved by the Head of Study Program (Kaprog) for their respective major, then forwarded to the IDUKA, and finally the official letter is printed through the school's printing division. Ensuring each submission's status stayed synchronized and easily traceable at every stage was the most complex part of building this system."
           }
         }
+      },
+      "portfolio": {
+        "name": "Personal Portfolio Website",
+        "description": "A personal portfolio website showcasing projects, experience, and achievements with interactive features.",
+        "longDescription": "This website is a personal portfolio built from scratch using Next.js App Router, featuring multi-language support (Indonesian/English), an authentication system for the Guestbook feature, a dashboard displaying real-time GitHub statistics, and a creative content gallery connected to TikTok.",
+        "tech": {
+          "nextjs": "React framework for routing, rendering, and API routes",
+          "typescript": "JavaScript superset with static typing for safer code",
+          "tailwind": "Utility-first CSS framework for responsive styling",
+          "prisma": "ORM for managing database schema and queries",
+          "postgresql": "Relational database for storing user data and Guestbook messages"
+        },
+        "features": {
+          "i18n": {
+            "title": "Multi-Language Support",
+            "description": "The entire website content can switch between Indonesian and English in real time."
+          },
+          "guestbook": {
+            "title": "Interactive Guestbook",
+            "description": "Visitors can sign in with Google or GitHub to leave messages and react to them."
+          },
+          "dashboard": {
+            "title": "Real-Time Statistics Dashboard",
+            "description": "Displays GitHub statistics such as contributions, repositories, and coding activity live."
+          },
+          "creations": {
+            "title": "Creative Content Gallery",
+            "description": "Automatically displays the latest TikTok content through external data integration."
+          }
+        },
+        "challenges": {
+          "i18nMigration": {
+            "title": "Migrating to a Multi-Language System",
+            "description": "One of the biggest challenges was restructuring all existing pages and components to support a multi-language system without breaking existing functionality, including moving the entire routing into a locale-based folder structure."
+          }
+        }
       }
     }
   },

@@ -289,6 +289,42 @@
             "description": "Salah satu tantangan terbesar adalah merancang alur pengajuan tempat PKL yang melibatkan banyak pihak secara berurutan. Siswa mengajukan tempat magang (IDUKA) yang harus disetujui oleh Kepala Program Keahlian (Kaprog) sesuai jurusan masing-masing terlebih dahulu, baru kemudian diteruskan ke pihak IDUKA, dan terakhir surat resmi dicetak melalui bagian percetakan sekolah. Memastikan status setiap pengajuan tetap sinkron dan mudah dilacak di setiap tahap menjadi bagian paling kompleks dalam pengembangan sistem ini."
           }
         }
+      },
+      "portfolio": {
+        "name": "Website Portfolio Pribadi",
+        "description": "Website portofolio pribadi yang menampilkan proyek, pengalaman, dan pencapaian dengan fitur interaktif.",
+        "longDescription": "Website ini adalah portofolio pribadi yang dibangun dari nol menggunakan Next.js App Router, dilengkapi dukungan multi-bahasa (Indonesia/Inggris), sistem autentikasi untuk fitur Buku Tamu, dashboard yang menampilkan statistik GitHub secara real-time, serta galeri konten kreatif yang terhubung dengan TikTok.",
+        "tech": {
+          "nextjs": "Framework React untuk routing, rendering, dan API routes",
+          "typescript": "Superset JavaScript dengan penambahan tipe statis untuk kode yang lebih aman",
+          "tailwind": "Utility-first CSS framework untuk styling responsif",
+          "prisma": "ORM untuk mengelola skema dan query database",
+          "postgresql": "Database relasional untuk menyimpan data pengguna dan pesan Buku Tamu"
+        },
+        "features": {
+          "i18n": {
+            "title": "Dukungan Multi-Bahasa",
+            "description": "Seluruh konten website dapat beralih antara Bahasa Indonesia dan Inggris secara real-time."
+          },
+          "guestbook": {
+            "title": "Buku Tamu Interaktif",
+            "description": "Pengunjung dapat login dengan Google atau GitHub untuk meninggalkan pesan dan memberi reaksi."
+          },
+          "dashboard": {
+            "title": "Dashboard Statistik Real-Time",
+            "description": "Menampilkan statistik GitHub seperti kontribusi, repositori, dan aktivitas coding secara langsung."
+          },
+          "creations": {
+            "title": "Galeri Konten Kreatif",
+            "description": "Menampilkan konten TikTok terbaru secara otomatis melalui integrasi data eksternal."
+          }
+        },
+        "challenges": {
+          "i18nMigration": {
+            "title": "Migrasi ke Sistem Multi-Bahasa",
+            "description": "Salah satu tantangan terbesar adalah merestrukturisasi seluruh halaman dan komponen yang sudah ada agar mendukung sistem multi-bahasa tanpa merusak fungsionalitas yang sudah berjalan, termasuk memindahkan seluruh routing ke dalam struktur folder locale."
+          }
+        }
       }
     }
   },

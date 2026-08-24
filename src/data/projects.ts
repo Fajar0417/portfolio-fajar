@@ -1,6 +1,13 @@
 import { IconType } from "react-icons";
 import { FaLaravel, FaPhp, FaDatabase } from "react-icons/fa";
-import { SiTailwindcss, SiMysql } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiPostgresql,
+  SiMysql,
+} from "react-icons/si";
 
 export type ProjectType = "Web" | "Mobile";
 
@@ -193,7 +200,7 @@ export const projects: Project[] = [
 
     category: "Internship",
 
-    featured: false,
+    featured: true,
 
     techStack: [
       {
@@ -279,5 +286,105 @@ export const projects: Project[] = [
 ],
   },
 
-  // project lainnya...
+   {
+    id: "portfolio",
+    slug: "portfolio-website",
+    nameKey: "items.portfolio.name",
+    descriptionKey: "items.portfolio.description",
+    longDescriptionKey: "items.portfolio.longDescription",
+    image: "/images/projects/portfolio.png",
+    previewImage: "/images/projects/portfolio.png",
+    url: "https://fajarportfolio.my.id",
+    githubUrl: "https://github.com/Fajar0417/portfolio-fajar",
+    views: 0,
+    type: "Web",
+    category: "Personal",
+    featured: true,
+    techStack: [
+      {
+        name: "Next.js",
+        icon: SiNextdotjs,
+        iconColor: "#000000",
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+        iconColor: "#3178C6",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        iconColor: "#06B6D4",
+      },
+      {
+        name: "Prisma",
+        icon: SiPrisma,
+        iconColor: "#2D3748",
+      },
+      {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+        iconColor: "#4169E1",
+      },
+    ],
+
+    techStackDetailed: [
+      {
+        name: "Next.js",
+        icon: SiNextdotjs,
+        iconColor: "#000000",
+        descriptionKey: "items.portfolio.tech.nextjs",
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+        iconColor: "#3178C6",
+        descriptionKey: "items.portfolio.tech.typescript",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: SiTailwindcss,
+        iconColor: "#06B6D4",
+        descriptionKey: "items.portfolio.tech.tailwind",
+      },
+      {
+        name: "Prisma",
+        icon: SiPrisma,
+        iconColor: "#2D3748",
+        descriptionKey: "items.portfolio.tech.prisma",
+      },
+      {
+        name: "PostgreSQL",
+        icon: SiPostgresql,
+        iconColor: "#4169E1",
+        descriptionKey: "items.portfolio.tech.postgresql",
+      },
+    ],
+
+    features: [
+      {
+        titleKey: "items.portfolio.features.i18n.title",
+        descriptionKey: "items.portfolio.features.i18n.description",
+      },
+      {
+        titleKey: "items.portfolio.features.guestbook.title",
+        descriptionKey: "items.portfolio.features.guestbook.description",
+      },
+      {
+        titleKey: "items.portfolio.features.dashboard.title",
+        descriptionKey: "items.portfolio.features.dashboard.description",
+      },
+      {
+        titleKey: "items.portfolio.features.creations.title",
+        descriptionKey: "items.portfolio.features.creations.description",
+      },
+    ],
+
+    challenges: [
+      {
+        titleKey: "items.portfolio.challenges.i18nMigration.title",
+        descriptionKey: "items.portfolio.challenges.i18nMigration.description",
+      },
+    ],
+  },
 ];
