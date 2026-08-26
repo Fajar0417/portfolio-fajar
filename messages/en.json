@@ -163,7 +163,8 @@
       "frontend": "Frontend",
       "mobile": "Mobile",
       "freelance": "Freelance",
-      "course": "Course"
+      "course": "Course",
+      "financial": "Financial"
     },
     "achievementModal": {
       "close": "Close",

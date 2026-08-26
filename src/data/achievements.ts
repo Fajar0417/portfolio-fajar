@@ -20,7 +20,18 @@ export interface Achievement {
 }
 
 export const achievements: Achievement[] = [
-  
+  {
+  id: "dicoding-dasar-pemrograman-javascript",
+  title: "Belajar Dasar Pemrograman JavaScript",
+  issuer: "Dicoding Indonesia",
+  credentialId: "JMZVL20GQXN9",
+  image: "/images/achievements/sertifikat7.png",
+  type: "Kursus",
+  categories: ["Backend", "Frontend"],
+  issueDate: "Agustus 2026",
+  description:
+    "Sertifikat kompetensi kelulusan dari Dicoding Indonesia setelah menyelesaikan kelas Belajar Dasar Pemrograman JavaScript. Membahas fundamental JavaScript mulai dari runtime environment, sintaksis & variabel, pengolahan fungsi & struktur data (Object, Array, Map, Set, Spread/Rest operator), pengatur alur & error handling, modularisasi ESM, paradigma Object-Oriented Programming (OOP) & Functional Programming (FP), pengelolaan Asynchronous Process (Callback, Promise, Async/Await), hingga Code Quality & testing menggunakan Node.js dan Bun.",
+},
 {
   id: "dicoding-financial-literacy",
   title: "Introduction to Financial Literacy",

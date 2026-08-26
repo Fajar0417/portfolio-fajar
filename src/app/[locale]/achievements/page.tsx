@@ -50,6 +50,7 @@ export default function AchievementsPage() {
     "Mobile",
     "Freelance",
     "Course",
+    "Financial",
   ];
 
   const getTypeLabel = (type: AchievementType) => {
@@ -77,6 +78,8 @@ export default function AchievementsPage() {
         return t("categories.freelance");
       case "Course":
         return t("categories.course");
+         case "Financial":
+        return t("categories.financial");
       default:
         return category;
     }
