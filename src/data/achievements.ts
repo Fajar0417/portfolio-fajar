@@ -4,6 +4,7 @@ export type AchievementCategory =
   | "Frontend"
   | "Mobile"
   | "Freelance"
+  | "Financial"
   | "Course";
 
 export interface Achievement {
@@ -19,6 +20,19 @@ export interface Achievement {
 }
 
 export const achievements: Achievement[] = [
+  
+{
+  id: "dicoding-financial-literacy",
+  title: "Introduction to Financial Literacy",
+  issuer: "Dicoding Indonesia",
+  credentialId: "6RPNO8934X2M",
+  image: "/images/achievements/sertifikat6.png",
+  type: "Kursus",
+  categories: ["Financial"],
+  issueDate: "Agustus 2026",
+  description:
+    "Sertifikat kompetensi kelulusan dari Dicoding Indonesia setelah menyelesaikan kelas Introduction to Financial Literacy dalam program Coding Camp powered by DBS Foundation 2026, dengan fokus pada prinsip-prinsip dasar literasi finansial, pengambilan keputusan keuangan sehari-hari, investasi, dan manajemen pinjaman.",
+},
 {
   id: "revou-intro-software-engineering",
   title: "Coding Camp - Intro to Software Engineering",
