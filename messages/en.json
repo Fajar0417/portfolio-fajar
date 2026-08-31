@@ -209,6 +209,45 @@
     "projectSingular": "Project",
     "projectPlural": "Projects",
     "items": {
+      "studentnotehub": {
+        "name": "StudentNoteHub - Student Notes & Planner",
+        "description": "A note-taking and planner app to help students manage course materials and assignment deadlines.",
+        "longDescription": "StudentNoteHub is a web application for students that combines a rich text editor, assignment deadline management, flashcards for studying, and note organization by course, all in one place.",
+        "tech": {
+          "nextjs": "React framework for App Router, Server Actions, and server-side rendering",
+          "typescript": "Type-safe programming language for more reliable code",
+          "supabase": "Backend-as-a-Service for Postgres database, authentication, and file storage",
+          "tailwind": "Utility-first CSS framework for responsive styling"
+        },
+        "features": {
+          "editor": {
+            "title": "Rich Note Editor",
+            "description": "Write notes with headings, lists, checklists, images, and code blocks, saved automatically."
+          },
+          "planner": {
+            "title": "Planner & Deadlines",
+            "description": "Manage assignment deadlines with a calendar and grouping by urgency."
+          },
+          "flashcard": {
+            "title": "Flashcards & Quiz",
+            "description": "Create flashcard decks for studying and test understanding through a multiple-choice quiz mode."
+          },
+          "search": {
+            "title": "Instant Search",
+            "description": "Search notes by title, course folder, or tag in real time."
+          }
+        },
+        "challenges": {
+          "autosave": {
+            "title": "Non-Intrusive Autosave",
+            "description": "Implementing debounce on autosave so it doesn't overload the server while the user is actively typing."
+          },
+          "rls": {
+            "title": "Cross-User Data Security",
+            "description": "Designing Row Level Security in Supabase so each user can only access their own data."
+          }
+        }
+      },
       "pos": {
         "name": "Kasir Aja - Point of Sale",
         "description": "A POS system to efficiently manage store sales transactions.",

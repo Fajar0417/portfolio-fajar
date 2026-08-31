@@ -209,6 +209,45 @@
     "projectSingular": "Proyek",
     "projectPlural": "Proyek",
     "items": {
+      "studentnotehub": {
+        "name": "StudentNoteHub - Catatan & Planner Mahasiswa",
+        "description": "Aplikasi catatan dan planner untuk membantu pelajar/mahasiswa mengelola materi kuliah dan deadline tugas.",
+        "longDescription": "StudentNoteHub adalah aplikasi web untuk pelajar dan mahasiswa yang menggabungkan rich text editor, manajemen deadline tugas, flashcard untuk belajar, dan pengelompokan catatan per mata kuliah dalam satu tempat.",
+        "tech": {
+          "nextjs": "Framework React untuk App Router, Server Actions, dan rendering sisi server",
+          "typescript": "Bahasa pemrograman dengan type-safety untuk kode yang lebih aman",
+          "supabase": "Backend-as-a-Service untuk database Postgres, autentikasi, dan storage file",
+          "tailwind": "Utility-first CSS framework untuk styling responsif"
+        },
+        "features": {
+          "editor": {
+            "title": "Editor Catatan Kaya",
+            "description": "Tulis catatan dengan heading, list, checklist, gambar, dan blok kode, tersimpan otomatis."
+          },
+          "planner": {
+            "title": "Planner & Deadline",
+            "description": "Kelola deadline tugas dengan kalender dan pengelompokan berdasarkan urgensi."
+          },
+          "flashcard": {
+            "title": "Flashcard & Quiz",
+            "description": "Buat deck flashcard untuk belajar dan uji pemahaman lewat mode quiz pilihan ganda."
+          },
+          "search": {
+            "title": "Pencarian Instan",
+            "description": "Cari catatan berdasarkan judul, folder mata kuliah, atau tag secara real-time."
+          }
+        },
+        "challenges": {
+          "autosave": {
+            "title": "Autosave Tanpa Ganggu Mengetik",
+            "description": "Menerapkan debounce pada penyimpanan otomatis agar tidak membebani server saat pengguna sedang aktif mengetik."
+          },
+          "rls": {
+            "title": "Keamanan Data Antar Pengguna",
+            "description": "Merancang Row Level Security di Supabase agar setiap pengguna hanya bisa mengakses data miliknya sendiri."
+          }
+        }
+      },
       "pos": {
         "name": "Kasir Aja - Point of Sale",
         "description": "Sistem kasir untuk mengelola transaksi penjualan toko secara efisien.",
