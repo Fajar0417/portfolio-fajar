@@ -16,14 +16,16 @@ interface TikTokVideo {
   shares: number;
 }
 
-function formatCount(n: number) {
-  if (n >= 1000000) return `${(n / 1000000).toFixed(1)}M`;
-  if (n >= 1000) return `${(n / 1000).toFixed(1)}K`;
-  return n.toString();
+function formatCount(n: number | undefined | null) {
+  const value = n ?? 0;
+  if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M`;
+  if (value >= 1000) return `${(value / 1000).toFixed(1)}K`;
+  return value.toString();
 }
 
 export function CreationVideoGrid() {
   const videos = (tiktokData as TikTokVideo[])
+    .filter((item) => item.id && item.thumbnail && item.url && item.createdAt)
     .slice()
     .sort(
       (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
