@@ -58,7 +58,9 @@ model VerificationToken {
 model Message {
   id        String     @id @default(cuid())
   content   String
+  isPinned  Boolean    @default(false)
   createdAt DateTime   @default(now())
+  updatedAt DateTime   @default(now()) @updatedAt
   userId    String
   user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
   parentId  String?

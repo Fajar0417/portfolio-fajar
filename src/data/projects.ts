@@ -298,7 +298,6 @@ export const projects: Project[] = [
     image: "/images/projects/portfolio.png",
     previewImage: "/images/projects/portfolio.png",
     url: "https://fajarportfolio.my.id",
-    githubUrl: "https://github.com/Fajar0417/portfolio-fajar",
     views: 2563,
     type: "Web",
     category: "Personal",

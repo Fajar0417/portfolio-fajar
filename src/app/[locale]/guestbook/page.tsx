@@ -50,7 +50,7 @@ function GuestbookContent() {
   }, [fetchMessages]);
 
   return (
-<section className="max-w-6xl mx-auto px-8 py-12">
+<section className="max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
       {/* ================= HEADER ================= */}
 
       <div className="mb-12 max-w-3xl">
@@ -68,7 +68,7 @@ function GuestbookContent() {
       
       {/* ================= MESSAGE LIST ================= */}
 
-      <div className="rounded-3xl border border-border bg-card/80 p-8 backdrop-blur">
+     <div className="rounded-3xl border border-border bg-card/80 p-4 sm:p-8 backdrop-blur">
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20">
             <Loader2 className="mb-4 size-8 animate-spin text-yellow-500" />
@@ -99,7 +99,7 @@ function GuestbookContent() {
 
       {/* ================= INPUT ================= */}
 
-      <div className="mt-8 rounded-3xl border border-border bg-card/80 p-6 backdrop-blur">
+     <div className="mt-6 sm:mt-8 rounded-3xl border border-border bg-card/80 p-4 sm:p-6 backdrop-blur">
         {session ? (
           <MessageInput onSent={fetchMessages} />
         ) : (
